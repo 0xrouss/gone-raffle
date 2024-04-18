@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="736" viewBox="0 0 2560 736">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 100px;
+        text-anchor: middle;
+        font-family: Subscribe;
+        fill: #B64CEB;
+      }
+    </style>
+  </defs>
+  <text id="Goneffle" class="cls-1" transform="translate(1280 634.935) scale(8.05)"><tspan x="0">Goneffle</tspan></text>
+</svg>
