@@ -14,6 +14,7 @@ contract Raffle is Ownable, ReentrancyGuard {
     uint256 public maxTickets;
     uint256 public totalTickets;
     uint256 public raffleEndTime;
+    address public winner;
 
     mapping(address => uint256) public ticketsOwned;
     address[] public participants;
@@ -61,10 +62,13 @@ contract Raffle is Ownable, ReentrancyGuard {
         uint256 winnerIndex = uint256(
             keccak256(abi.encodePacked(block.timestamp, block.difficulty))
         ) % participants.length;
-        address winner = participants[winnerIndex];
+        winner = participants[winnerIndex];
 
         uint256 prizeAmount = token.balanceOf(address(this));
         token.safeTransfer(winner, prizeAmount);
+
+        uint256 contractBalance = address(this).balance;
+        payable(owner()).transfer(contractBalance);
         emit WinnerPicked(winner);
     }
 
