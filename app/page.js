@@ -9,7 +9,10 @@ import {
     useBalance,
 } from "wagmi";
 
-import { getContractData, goneffleContract } from "./hooks/getContractData";
+import {
+    useGetContractData,
+    goneffleContract,
+} from "./hooks/useGetContractData";
 import { TicketCounter } from "./components/TicketCounter";
 import { AdminPanel } from "./components/AdminPanel";
 import { BuyButton } from "./components/BuyButton";
@@ -27,7 +30,7 @@ export default function Home() {
         winner,
         error,
         isPending,
-    } = getContractData();
+    } = useGetContractData();
 
     const [userBalance, setUserBalance] = useState(0);
 

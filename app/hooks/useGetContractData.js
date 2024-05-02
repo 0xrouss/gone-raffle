@@ -7,7 +7,7 @@ export const goneffleContract = {
     abi: goneffleABI,
 };
 
-export function getContractData() {
+export function useGetContractData() {
     const { data, error, isPending } = useReadContracts({
         contracts: [
             {

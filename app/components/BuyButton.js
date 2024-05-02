@@ -1,5 +1,5 @@
 import { parseEther } from "viem";
-import { goneffleContract } from "../hooks/getContractData";
+import { goneffleContract } from "../hooks/useGetContractData";
 
 export function BuyButton({
     isConnected,

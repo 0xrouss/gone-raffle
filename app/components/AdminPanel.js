@@ -1,5 +1,5 @@
 import { useWriteContract } from "wagmi";
-import { goneffleContract } from "../hooks/getContractData";
+import { goneffleContract } from "../hooks/useGetContractData";
 
 export function AdminPanel({ user, owner }) {
     const { writeContractAsync } = useWriteContract();
