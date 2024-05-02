@@ -93,12 +93,13 @@ export default function Home() {
                     <ConnectKitButton />
                 </div>
 
-                {winner && (
-                    <div className="text-green-600 flex flex-col items-center font-bold text-base mb-4">
-                        <p>Winner:</p>
-                        <p>{winner}</p>
-                    </div>
-                )}
+                {winner &&
+                    winner != "0x0000000000000000000000000000000000000000" && (
+                        <div className="text-green-600 flex flex-col items-center font-bold text-base mb-4">
+                            <p>Winner:</p>
+                            <p>{winner}</p>
+                        </div>
+                    )}
 
                 <div className="text-center text-xl">
                     <p>Enter for a chance to win</p>

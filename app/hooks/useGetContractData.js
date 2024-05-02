@@ -3,7 +3,7 @@ import { useReadContracts } from "wagmi";
 import goneffleABI from ".././contracts/goneffleABI.json";
 
 export const goneffleContract = {
-    address: "0xa0c43A0A6118518539E0ace737D07b8f74042CAE",
+    address: "0x122034322b1adc85ddd8d844c2be2d042de65001",
     abi: goneffleABI,
 };
 

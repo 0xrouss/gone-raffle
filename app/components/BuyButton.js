@@ -15,7 +15,7 @@ export function BuyButton({
         if (!isConnected) {
             return "Please Connect";
         }
-        if (winner) {
+        if (winner && winner !== "0x0000000000000000000000000000000000000000") {
             return "Raffle ended";
         }
         if (ticketCount * ticketPrice > userBalance) {
@@ -29,7 +29,7 @@ export function BuyButton({
 
     const isBuyActive =
         isConnected &&
-        !winner &&
+        (!winner || winner === "0x0000000000000000000000000000000000000000") &&
         ticketsAvailable &&
         ticketCount * ticketPrice <= userBalance;
 
